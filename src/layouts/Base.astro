@@ -1,5 +1,7 @@
 ---
 import "@fontsource-variable/red-hat-text";
+
+import Header from "../components/global/Header.jsx";
 ---
 
 <html lang="en">
@@ -30,7 +32,8 @@ import "@fontsource-variable/red-hat-text";
             content="HTML, CSS, JavaScript, Rust, TypeScript, Vue, Cats, RUBS, CATS, Stacks, Solid, JS, Astro, Catto, catto, labs, Pokaimon, undefined, labs, unocss, tailwindcss, tailwind, pronote, pawnote, pokaimon.moe, Supabase, Hackathon, trobo, trobonox, vexcited, pnxl, pixel, flexbox, github, git, Cloudflare, Netlify"
         />
     </head>
-    <body>
+    <body class="bg-gray-900 text-gray-300">
+        <Header />
         <slot />
     </body>
 </html>
