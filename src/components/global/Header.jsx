@@ -13,7 +13,7 @@ export default function Header() {
             <a href="/">
                 <LogoHover />
             </a>
-            <div class="my-auto flex w-full flex-row justify-between text-center uppercase tracking-tighter text-gray-400 sm:w-fit sm:justify-center sm:gap-x-8">
+            <div class="my-auto flex w-full flex-row justify-between text-center font-light uppercase tracking-tight text-gray-400 sm:w-fit sm:justify-center sm:gap-x-8">
                 <Link text="What we do" url="/#what-we-do" />
                 <Link text="Who we are" url="/#who-we-are" />
                 <Link text="Open-source" url="https://github.com/catto-labs/" />
