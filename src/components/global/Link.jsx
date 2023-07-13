@@ -6,7 +6,7 @@ export default function Link(props) {
         "transition duration-200 ease-in-out group-hover:text-gray-200";
 
     return (
-        <a class="group relative" href={props.url}>
+        <a class="group relative w-fit" href={props.url}>
             <span class={textHover}>{props.text}</span>
             <span class={underlineHover + " left-1/2"}></span>
             <span class={underlineHover + " right-1/2"}></span>
