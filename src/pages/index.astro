@@ -1,7 +1,85 @@
 ---
 import Base from "../layouts/Base.astro";
+import Scroller from "../components/pages/index/Scroller.astro";
 ---
 
 <Base>
-	<h1>Astro</h1>
+    <main>
+        <section id="hero" style="height: calc(100vh - 8rem)">
+            <div
+                class="flex flex-row justify-center"
+                style="height: calc(100vh - 18rem)"
+            >
+                <div class="flex flex-col gap-y-2 justify-center">
+                    <h1 class="text-4xl font-semibold text-gray-100">
+                        "random ppl building random stuff"
+                    </h1>
+                    <h2 class="text-3xl text-gray-400">- vexcited</h2>
+                </div>
+            </div>
+            <div class="flex flex-row justify-center">
+                <div class="flex flex-col gap-y-6 justify-center">
+                    <p>Scroll down</p>
+                    <Scroller />
+                </div>
+            </div>
+        </section>
+        <section
+            id="about"
+            style="height: calc(100vh - 7rem)"
+            class="py-16 gap-y-8 flex flex-col"
+        >
+            <h2 class="text-3xl font-semibold">About Us</h2>
+            <div class="flex flex-col gap-y-2">
+                <h3 class="text-2xl">Hey there, we're catto labs.</h3>
+                <p class="">
+                    We're a group of developers building all kinds of software,
+                    all while having fun along the way.
+                </p>
+                <p></p>
+                <p></p>
+                <p>...</p>
+                <p></p>
+                <p></p>
+                <p>Jason: Was that the whole script?</p>
+                <p>Vexcited: Uhh.. yeah.</p>
+                <p>Trobo: Bruh - that's too short. 🤦🏻‍♂️</p>
+                <p>
+                    Jason: I guess this is what we meant by having fun in
+                    projects? ¯\_(ツ)_/¯
+                </p>
+            </div>
+        </section>
+        <!-- <section
+            id="what-we-do"
+            style="height: calc(100vh - 7rem)"
+            class="py-16 gap-y-16 flex flex-col"
+        >
+            <div class="gap-y-8 flex flex-col">
+                <h2 class="text-3xl font-semibold">What we do:</h2>
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="card">a</div>
+                    <div class="card">a</div>
+                    <div class="card">a</div>
+                </div>
+            </div>
+        </section> -->
+    </main>
 </Base>
+
+<!-- <style>
+    .card {
+        @apply relative h-48 rounded-xl border border-gray-700 bg-gray-800 bg-opacity-30 p-4;
+    }
+
+    .card::before {
+        background: radial-gradient(
+            50rem circle at 100px,
+            100px,
+            rgba(255, 255, 255, 0.06),
+            transparent 40%
+        );
+        border-radius: inherit;
+        @apply absolute left-0 top-0 z-20 h-full w-full;
+    }
+</style> -->
