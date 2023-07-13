@@ -1,4 +1,5 @@
 import LogoHover from "./LogoHover.jsx";
+import Link from "./Link.jsx";
 
 export default function Header() {
     const underlineHover =
@@ -13,21 +14,9 @@ export default function Header() {
                 <LogoHover />
             </a>
             <div class="my-auto flex w-full flex-row justify-between text-center uppercase tracking-tighter text-gray-400 sm:w-fit sm:justify-center sm:gap-x-8">
-                <a class="group relative" href="/#what-we-do">
-                    <span class={textHover}>What we do</span>
-                    <span class={underlineHover + " left-1/2"}></span>
-                    <span class={underlineHover + " right-1/2"}></span>
-                </a>
-                <a class="group relative" href="/#who-we-are">
-                    <span class={textHover}>Who we are</span>
-                    <span class={underlineHover + " left-1/2"}></span>
-                    <span class={underlineHover + " right-1/2"}></span>
-                </a>
-                <a class="group relative" href="https://github.com/catto-labs/">
-                    <span class={textHover}>Open-source</span>
-                    <span class={underlineHover + " left-1/2"}></span>
-                    <span class={underlineHover + " right-1/2"}></span>
-                </a>
+                <Link text="What we do" url="/#what-we-do" />
+                <Link text="Who we are" url="/#who-we-are" />
+                <Link text="Open-source" url="https://github.com/catto-labs/" />
             </div>
         </header>
     );
