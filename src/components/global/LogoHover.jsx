@@ -3,7 +3,7 @@ import cattoText from "../../assets/type_white.svg";
 
 export default function LogoHover() {
     return (
-        <div class="group flex flex-row gap-x-4 text-white transition-all duration-500 ease-in-out hover:scale-105">
+        <div class="group flex flex-row gap-x-4 text-white transition-all duration-200 ease-in-out hover:scale-[1.025]">
             <svg
                 width="3518"
                 height="3798"
