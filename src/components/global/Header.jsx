@@ -8,11 +8,11 @@ export default function Header() {
         "transition duration-200 ease-in-out group-hover:text-gray-200";
 
     return (
-        <header class="mx-32 my-16 flex flex-row justify-between">
+        <header class="flex flex-col items-center justify-between gap-y-6 md:flex-row md:items-start md:gap-y-0">
             <a href="/">
                 <LogoHover />
             </a>
-            <div class="my-auto flex flex-row gap-x-8 uppercase tracking-tighter text-gray-400">
+            <div class="my-auto flex w-full flex-row justify-between text-center uppercase tracking-tighter text-gray-400 sm:w-fit sm:justify-center sm:gap-x-8">
                 <a class="group relative" href="/#what-we-do">
                     <span class={textHover}>What we do</span>
                     <span class={underlineHover + " left-1/2"}></span>
