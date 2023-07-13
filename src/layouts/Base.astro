@@ -4,11 +4,31 @@ import "@fontsource-variable/red-hat-text";
 
 <html lang="en">
     <head>
+        <!-- The unimportant stuff -->
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+
+        <!-- Website metadata -->
+        <title>catto.labs</title>
+        <meta property="og:title" content="catto labs" />
+        <meta
+            name="description"
+            content="We are catto labs, a team of developers around the world who want to have some fun creating projects together."
+        />
+
+        <!-- catto labs branding -->
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta property="og:image" content="/banner.png" />
+
+        <!-- miscellaneous properties -->
+        <meta name="twitter:card" content="summary" />
+
+        <!-- uhhhh -->
+        <meta
+            name="keywords"
+            content="HTML, CSS, JavaScript, Rust, TypeScript, Vue, Cats, RUBS, CATS, Stacks, Solid, JS, Astro, Catto, catto, labs, Pokaimon, undefined, labs, unocss, tailwindcss, tailwind, pronote, pawnote, pokaimon.moe, Supabase, Hackathon, trobo, trobonox, vexcited, pnxl, pixel, flexbox, github, git, Cloudflare, Netlify"
+        />
     </head>
     <body>
         <slot />
