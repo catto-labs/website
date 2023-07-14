@@ -14,9 +14,9 @@ dependencies:
   '@fontsource-variable/red-hat-text':
     specifier: ^5.0.6
     version: 5.0.6
-  '@iconify-icons/cib':
-    specifier: ^1.2.4
-    version: 1.2.4
+  '@iconify-icons/simple-icons':
+    specifier: ^1.2.59
+    version: 1.2.59
   astro:
     specifier: ^2.8.1
     version: 2.8.1
@@ -818,8 +818,8 @@ packages:
     resolution: {integrity: sha512-kJ2HcbPhySnpMkWm/3cB3Wd5I4RT69GdPZZZ1jOnGi0U8g7n6qlKyMWgYUvZR1WLQbwoJ2OjCpwy2JYSJRYcsA==}
     dev: false
 
-  /@iconify-icons/cib@1.2.4:
-    resolution: {integrity: sha512-o6HlNUMWiOGBgqxT0du1beQr4EaVK1wRvms2UOFN40JE97DaZMx1cxBYfPcnkbd1n4wI3HhXGrcJL9MdQ9KHCA==}
+  /@iconify-icons/simple-icons@1.2.59:
+    resolution: {integrity: sha512-5iXYkc8/sOSO1jpeBtDc/bPslMkCOqYQOyKeOIJEfpCZdsS4PKXqs0RQZQlP+Mu9eOW7QOa0qfmmCnRYBUrJaw==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false

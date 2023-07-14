@@ -14,7 +14,7 @@
         "@astrojs/solid-js": "^2.2.0",
         "@astrojs/tailwind": "^4.0.0",
         "@fontsource-variable/red-hat-text": "^5.0.6",
-        "@iconify-icons/cib": "^1.2.4",
+        "@iconify-icons/simple-icons": "^1.2.59",
         "astro": "^2.8.1",
         "astro-icon": "^0.8.1",
         "solid-js": "^1.4.3",
