@@ -14,6 +14,9 @@ dependencies:
   '@fontsource-variable/red-hat-text':
     specifier: ^5.0.6
     version: 5.0.6
+  '@iconify-json/devicon-plain':
+    specifier: ^1.1.12
+    version: 1.1.12
   astro:
     specifier: ^2.8.1
     version: 2.8.1
@@ -26,6 +29,9 @@ dependencies:
   typewriter-effect:
     specifier: ^2.20.1
     version: 2.20.1(react-dom@18.2.0)(react@18.2.0)
+  vanilla-tilt:
+    specifier: ^1.8.0
+    version: 1.8.0
 
 devDependencies:
   '@iconify-json/fa6-solid':
@@ -832,6 +838,12 @@ packages:
     resolution: {integrity: sha512-kJ2HcbPhySnpMkWm/3cB3Wd5I4RT69GdPZZZ1jOnGi0U8g7n6qlKyMWgYUvZR1WLQbwoJ2OjCpwy2JYSJRYcsA==}
     dev: false
 
+  /@iconify-json/devicon-plain@1.1.12:
+    resolution: {integrity: sha512-2vWtm9ZJYG8CuDyXZp06hyPEg4QaYihlXPz1yTMZ8pcziyjJNwrk1WP9FdXalPPrI+PD0bYGSfvrBhLzdpStsA==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify-json/fa6-solid@1.1.13:
     resolution: {integrity: sha512-4rpV5lqeerkL3PBuoIYFKtOWjEIcv2q9g+lai0jSTlgzmF/hcxkozXzhhGtEjQhYqAIPR01wxlHFIhwhLN2O9w==}
     dependencies:
@@ -846,7 +858,6 @@ packages:
 
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
-    dev: true
 
   /@iconify/utils@2.1.7:
     resolution: {integrity: sha512-P8S3z/L1LcV4Qem9AoCfVAaTFGySEMzFEY4CHZLkfRj0Fv9LiR+AwjDgrDrzyI93U2L2mg9JHsbTJ52mF8suNw==}
@@ -3727,6 +3738,10 @@ packages:
 
   /validate-html-nesting@1.2.2:
     resolution: {integrity: sha512-hGdgQozCsQJMyfK5urgFcWEqsSSrK63Awe0t/IMR0bZ0QMtnuaiHzThW81guu3qx9abLi99NEuiaN6P9gVYsNg==}
+    dev: false
+
+  /vanilla-tilt@1.8.0:
+    resolution: {integrity: sha512-wVCHyyfRuiRdKhDTNxKPb60lkagmywDSqLgFETEr71Sm646AvGxuf/14Kx9A8FaISyYvMoKQHk6FTqt+YLGhEw==}
     dev: false
 
   /vfile-location@4.1.0:
