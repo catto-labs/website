@@ -1,6 +1,43 @@
 ---
+import IconVue from "~icons/simple-icons/vuedotjs";
+import IconSolid from "~icons/simple-icons/solid";
+import IconTypescript from "~icons/simple-icons/typescript";
+import IconJavascript from "~icons/simple-icons/javascript";
+import IconSupabase from "~icons/simple-icons/supabase";
+import IconTailwindCss from "~icons/simple-icons/tailwindcss";
+import IconUnoCss from "~icons/simple-icons/unocss";
+import IconHeadlessUi from "~icons/simple-icons/headlessui";
+import IconAstro from "~icons/simple-icons/astro";
+import IconPython from "~icons/simple-icons/python";
+import IconCsharp from "~icons/devicon-plain/csharp";
+import IconJava from "~icons/devicon-plain/java";
+import IconReact from "~icons/simple-icons/react";
+
+import IconRust from "~icons/simple-icons/rust";
+
 import Base from "../layouts/Base.astro";
 import Scroller from "../components/pages/index/Scroller.astro";
+
+import LogoPokaimon from "../assets/projects/pokaimon.svg";
+import LogoPawnote from "../assets/projects/pawnote.svg";
+
+import PfpVexcited from "../assets/profiles/vexcited.png";
+import PfpTrobo from "../assets/profiles/trobo.jpg";
+import PfpPnxl from "../assets/profiles/pnxl.png";
+
+import IconInstagram from "~icons/simple-icons/instagram";
+import IconTwitter from "~icons/simple-icons/twitter";
+import IconGithub from "~icons/simple-icons/github";
+import IconDiscord from "~icons/simple-icons/discord";
+import IconEmail from "~icons/fa6-solid/envelope";
+
+import ProjectCardBase from "../components/pages/index/project-card/Base.astro";
+import ProjectCardTech from "../components/pages/index/project-card/Tech.astro";
+
+import SocialCardBase from "../components/pages/index/social-card/Base.astro";
+import SocialCardTech from "../components/pages/index/social-card/Tech.astro";
+import SocialCardLinks from "../components/pages/index/social-card/Socials.astro";
+import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
 ---
 
 <Base>
@@ -47,37 +84,329 @@ import Scroller from "../components/pages/index/Scroller.astro";
                     </p>
                 </div>
             </section>
-            <!-- <section
-            id="what-we-do"
-            style="height: calc(100vh - 7rem)"
-            class="py-16 gap-y-16 flex flex-col"
-        >
-            <div class="gap-y-8 flex flex-col">
-                <h2 class="text-3xl font-semibold">What we do:</h2>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="card">a</div>
-                    <div class="card">a</div>
-                    <div class="card">a</div>
+            <section id="projects" class="py-16 gap-y-16 flex flex-col">
+                <h2 class="text-3xl font-semibold">Our Projects</h2>
+                <div class="grid grid-cols-1 gap-16" id="cards">
+                    <ProjectCardBase
+                        logo={LogoPawnote}
+                        bg="bg-[url(/src/assets/projects/pawnote.png)]"
+                        url="https://beta-pawnote.vercel.app/"
+                        git="https://github.com/catto-labs/pawnote"
+                    >
+                        <p class="max-w-[32rem] text-lg">
+                            A speedy and performant client for Pronote, which
+                            includes many features - such as offline access,
+                            multi-account support, local saves, and easy ENT
+                            support.
+                        </p>
+                        <ProjectCardTech>
+                            <IconSolid
+                                class="group-hover:text-brand-solidjs tech-icon"
+                            />
+                            <IconTypescript
+                                class="group-hover:text-brand-typescript tech-icon delay-100"
+                            />
+                            <IconUnoCss
+                                class="group-hover:text-brand-unocss tech-icon delay-200"
+                            />
+                        </ProjectCardTech>
+                    </ProjectCardBase>
+                    <ProjectCardBase
+                        logo={LogoPokaimon}
+                        bg="bg-[url(/src/assets/projects/pokaimon.png)]"
+                        url="https://pokaimon.moe"
+                        git="https://github.com/catto-labs/pokaimon"
+                    >
+                        <p class="max-w-[32rem] text-lg">
+                            Pokaimon is a Genshin Impact themed collectible game
+                            with mechanics similar to Pokémon, made for the
+                            Supabase Launch Week 5 Hackathon.
+                        </p>
+                        <p class="max-w-[32rem] text-lg">
+                            You can have 1v1 fights and collect character cards,
+                            items and ingame currency in the setting of the
+                            Genshin Impact world.
+                        </p>
+                        <ProjectCardTech>
+                            <IconVue
+                                class="group-hover:text-brand-vue tech-icon"
+                            />
+                            <IconTypescript
+                                class="group-hover:text-brand-typescript tech-icon delay-100"
+                            />
+                            <IconSupabase
+                                class="group-hover:text-brand-supabase tech-icon delay-200"
+                            />
+                            <IconTailwindCss
+                                class="group-hover:text-brand-tailwindcss tech-icon delay-300"
+                            />
+                            <IconHeadlessUi
+                                class="group-hover:text-brand-headlessui tech-icon delay-[400ms]"
+                            />
+                        </ProjectCardTech>
+                    </ProjectCardBase>
                 </div>
-            </div>
-        </section> -->
+            </section>
+            <section id="team" class="py-16 gap-y-16 flex flex-col">
+                <h2 class="text-3xl font-semibold">Our Team</h2>
+                <div
+                    class="grid xl:grid-cols-3 lg:grid-cols-2 gap-8"
+                    id="cards"
+                >
+                    <SocialCardBase
+                        img={PfpPnxl}
+                        name="Jason"
+                        username="@pnxl"
+                        role="CDO - Chief Design Officer"
+                        url="pnxl.dev"
+                    >
+                        <SocialCardTech>
+                            <SocialCardChip text="Vue" url="https://vuejs.org/">
+                                <IconVue
+                                    class="social-tech sm:text-brand-vue"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="React"
+                                url="https://react.dev/"
+                            >
+                                <IconReact
+                                    class="social-tech sm:text-brand-react"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="JavaScript"
+                                url="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/"
+                            >
+                                <IconJavascript
+                                    class="social-tech sm:text-brand-javascript"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Tailwind CSS"
+                                url="https://www.tailwindcss.com/"
+                            >
+                                <IconTailwindCss
+                                    class="social-tech sm:text-brand-tailwindcss"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Python"
+                                url="https://python.org/"
+                            >
+                                <IconPython
+                                    class="social-tech sm:text-brand-python"
+                                />
+                            </SocialCardChip>
+                        </SocialCardTech>
+                        <SocialCardLinks>
+                            <SocialCardChip
+                                text="jason@pnxl.dev"
+                                url="mailto:jason@pnxl.dev"
+                            >
+                                <IconEmail
+                                    class="social-tech sm:text-yellow-300"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="pnxl"
+                                url="https://github.com/pnxl"
+                            >
+                                <IconGithub
+                                    class="social-tech sm:text-brand-github"
+                                />
+                            </SocialCardChip>
+                        </SocialCardLinks>
+                    </SocialCardBase>
+                    <SocialCardBase
+                        img={PfpVexcited}
+                        name="Mikkel Ringaud"
+                        username="@Vexcited"
+                        role="CTO - Chief Technical Officer"
+                        url="vexcited.vercel.app"
+                    >
+                        <SocialCardTech>
+                            <SocialCardChip
+                                text="Rust"
+                                url="https://www.rust-lang.org/"
+                            >
+                                <IconRust
+                                    class="social-tech sm:text-brand-rust"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="SolidJS"
+                                url="https://www.solidjs.com/"
+                            >
+                                <IconSolid
+                                    class="social-tech sm:text-brand-solidjs"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="TypeScript"
+                                url="https://www.typescriptlang.org/"
+                            >
+                                <IconTypescript
+                                    class="social-tech sm:text-brand-typescript"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Supabase"
+                                url="https://supabase.com/"
+                            >
+                                <IconSupabase
+                                    class="social-tech sm:text-brand-supabase"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="UnoCSS"
+                                url="https://www.unocss.com/"
+                            >
+                                <IconUnoCss
+                                    class="social-tech sm:text-brand-unocss"
+                                />
+                            </SocialCardChip>
+                        </SocialCardTech>
+                        <SocialCardLinks>
+                            <SocialCardChip
+                                text="mikkel@milescode.dev"
+                                url="mailto:mikkel@milescode.dev"
+                            >
+                                <IconEmail
+                                    class="social-tech sm:text-yellow-300"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="vexcitedoff"
+                                url="https://instagram.com/vexcitedoff"
+                            >
+                                <IconInstagram
+                                    class="social-tech sm:text-brand-instagram"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="@vexcitedoff"
+                                url="https://twitter.com/vexcitedoff"
+                            >
+                                <IconTwitter
+                                    class="social-tech sm:text-brand-twitter"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Vexcited"
+                                url="https://github.com/vexcited"
+                            >
+                                <IconGithub
+                                    class="social-tech sm:text-brand-github"
+                                />
+                            </SocialCardChip>
+                        </SocialCardLinks>
+                    </SocialCardBase>
+                    <SocialCardBase
+                        img={PfpTrobo}
+                        name="trobo"
+                        username="@trobonox"
+                        role="CEO - Chief Engineer Officer"
+                        url="trobo.tech"
+                    >
+                        <SocialCardTech>
+                            <SocialCardChip text="Vue" url="https://vuejs.org/">
+                                <IconVue
+                                    class="social-tech sm:text-brand-vue"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Astro"
+                                url="https://astro.build/"
+                            >
+                                <IconAstro
+                                    class="social-tech sm:text-brand-astro"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="TypeScript"
+                                url="https://www.typescriptlang.org/"
+                            >
+                                <IconTypescript
+                                    class="social-tech sm:text-brand-typescript"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Python"
+                                url="https://python.org/"
+                            >
+                                <IconPython
+                                    class="social-tech sm:text-brand-python"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="C# (and DotNet)"
+                                url="https://dotnet.microsoft.com/languages/csharp"
+                            >
+                                <IconCsharp
+                                    class="social-tech sm:text-brand-csharp"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Java"
+                                url="https://www.java.com/"
+                            >
+                                <IconJava
+                                    class="social-tech sm:text-brand-java"
+                                />
+                            </SocialCardChip>
+                        </SocialCardTech>
+                        <SocialCardLinks>
+                            <SocialCardChip
+                                text="hello@trobo.tech"
+                                url="mailto:hello@trobo.tech"
+                            >
+                                <IconEmail
+                                    class="social-tech sm:text-yellow-300"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="@trobo_tech"
+                                url="https://twitter.com/trobo_tech"
+                            >
+                                <IconTwitter
+                                    class="social-tech sm:text-brand-twitter"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="trobo.tech"
+                                url="https://discord.com/users/540898474288480256"
+                            >
+                                <IconDiscord
+                                    class="social-tech sm:text-brand-discord"
+                                />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="trobonox"
+                                url="https://github.com/trobonox/"
+                            >
+                                <IconGithub
+                                    class="social-tech sm:text-brand-github"
+                                />
+                            </SocialCardChip>
+                        </SocialCardLinks>
+                    </SocialCardBase>
+                </div>
+            </section>
         </div>
     </main>
 </Base>
 
-<!-- <style>
-    .card {
-        @apply relative h-48 rounded-xl border border-gray-700 bg-gray-800 bg-opacity-30 p-4;
+<style>
+    .tech-icon {
+        @apply h-6 transition duration-500 ease-in-out;
     }
 
-    .card::before {
-        background: radial-gradient(
-            50rem circle at 100px,
-            100px,
-            rgba(255, 255, 255, 0.06),
-            transparent 40%
-        );
-        border-radius: inherit;
-        @apply absolute left-0 top-0 z-20 h-full w-full;
+    .social-icon {
+        @apply h-4 transition duration-[250ms] ease-in-out;
     }
-</style> -->
+
+    .social-tech {
+        @apply my-auto w-6 sm:h-4;
+    }
+</style>

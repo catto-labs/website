@@ -1,0 +1,73 @@
+---
+const { img, name, username, role, url, email } = Astro.props;
+
+import IconLink from "~icons/fa6-solid/link";
+---
+
+<div
+    class="profile-card"
+    data-tilt
+    data-tilt-glare
+    data-tilt-max-glare="0.15"
+    data-tilt-max="5"
+>
+    <div
+        class="flex sm:flex-row flex-col gap-y-4 items-center md:items-start text-center md:text-left gap-x-4"
+    >
+        <img src={img} />
+        <div class="flex flex-col gap-y-2">
+            <h6 class="name">
+                {name}
+                <span>{username}</span>
+            </h6>
+            <p>{role.replace("-", "•")}</p>
+            {
+                url ? (
+                    <a
+                        href={`https://${url}`}
+                        class=" hover:underline hover:text-blue-200 inline-flex gap-x-2 text-gray-400"
+                    >
+                        <>
+                            <IconLink class="social-icon h-5 mt-auto hidden sm:inline-flex" />
+                            <p class="duration-[250ms] w-full sm:w-fit">
+                                {url}
+                            </p>
+                        </>
+                    </a>
+                ) : null
+            }
+        </div>
+    </div>
+    <slot />
+</div>
+
+<style>
+    .profile-card {
+        @apply flex flex-col gap-y-6 rounded-lg border border-gray-700 bg-[rgb(26,29,53)] bg-opacity-90 p-4;
+    }
+
+    .profile-card > div > img {
+        @apply h-24 w-max rounded-full border border-gray-900 sm:rounded-lg;
+    }
+
+    .name {
+        @apply text-lg font-semibold;
+    }
+
+    .name > span::before {
+        content: "(";
+    }
+
+    .name > span::after {
+        content: ")";
+    }
+    .name > span {
+        @apply text-sm font-normal text-gray-400;
+    }
+
+    .links {
+        @apply flex flex-row gap-x-4;
+    }
+</style>
+
+<script src="vanilla-tilt"></script>
