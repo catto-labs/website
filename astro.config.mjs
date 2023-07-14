@@ -1,9 +1,18 @@
 import { defineConfig } from "astro/config";
-import solidJs from "@astrojs/solid-js";
 
+import solidJs from "@astrojs/solid-js";
 import tailwind from "@astrojs/tailwind";
+
+import Icons from "unplugin-icons/vite";
 
 // https://astro.build/config
 export default defineConfig({
     integrations: [solidJs(), tailwind()],
+    vite: {
+        plugins: [
+            Icons({
+                compiler: "astro",
+            }),
+        ],
+    },
 });
