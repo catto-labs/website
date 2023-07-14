@@ -49,7 +49,9 @@ import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
             >
                 <div class="flex flex-col gap-y-2 justify-center">
                     <h1 class="text-4xl font-semibold">
-                        "random ppl building random stuff"
+                        "random ppl building <span class="cool-text underline"
+                            >random stuff</span
+                        >"
                     </h1>
                     <h2 class="text-3xl">- vexcited</h2>
                 </div>
@@ -412,5 +414,59 @@ import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
 
     .social-tech {
         @apply my-auto w-6 transition duration-[250ms] sm:h-4;
+    }
+
+    @keyframes background-pan {
+        from {
+            background-position: 0% center;
+        }
+
+        to {
+            background-position: -200% center;
+        }
+    }
+
+    @keyframes star-scale {
+        from,
+        to {
+            transform: scale(0);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes star-rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+    .cool-text {
+        background: linear-gradient(
+            to right,
+            #b7bdf8,
+            #c6a0f6,
+            #f5bde6,
+            #f0c6c6,
+            #b7bdf8
+        );
+        background-size: 200%;
+
+        animation: background-pan 2s linear infinite;
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        position: relative;
+    }
+
+    .cool-text::selection {
+        -webkit-text-fill-color: #181926;
     }
 </style>
