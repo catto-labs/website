@@ -63,7 +63,7 @@ const { logo, url, git, bg } = Astro.props;
     }
 
     .card > .content {
-        @apply relative z-20 flex h-fit flex-col gap-y-8 rounded-[0.8rem] border border-gray-700 bg-gradient-to-br from-[rgb(30,30,46)] via-[rgba(30,30,46,0.9)] to-transparent p-8 pb-16 backdrop-blur-sm backdrop-brightness-50 md:bg-gradient-to-r md:pb-8 lg:backdrop-blur-0 lg:backdrop-brightness-75;
+        @apply relative z-20 flex h-fit flex-col gap-y-8 rounded-[0.8rem] border border-surface0 bg-gradient-to-br from-[rgb(30,30,46)] via-[rgba(30,30,46,0.9)] to-transparent p-8 pb-16 backdrop-blur-sm backdrop-brightness-50 md:bg-gradient-to-r md:pb-8 lg:backdrop-blur-0 lg:backdrop-brightness-75;
     }
 
     .tech-icon {
@@ -79,7 +79,7 @@ const { logo, url, git, bg } = Astro.props;
             #885db3 60%,
             #7663b0 100%
         );
-        @apply inline-flex gap-x-2 rounded-lg border border-gray-700 px-4 py-2 shadow-xl transition-all duration-500 ease-in-out;
+        @apply inline-flex gap-x-2 rounded-lg border border-surface0 px-4 py-2 shadow-xl transition-all duration-500 ease-in-out;
     }
 
     .card-button:hover {
@@ -87,7 +87,7 @@ const { logo, url, git, bg } = Astro.props;
     }
 
     .card-button > p {
-        @apply font-semibold text-gray-300 transition-all duration-500 ease-in-out hover:text-white;
+        @apply font-semibold text-subtext1 transition-all duration-500 ease-in-out hover:text-text;
     }
 </style>
 
