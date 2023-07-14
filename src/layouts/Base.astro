@@ -34,7 +34,7 @@ import Footer from "../components/global/Footer.jsx";
         />
     </head>
     <body
-        class="macchiato bg-mantle text-subtext0 flex flex-col justify-between min-h-screen"
+        class="macchiato bg-mantle flex flex-col justify-between min-h-screen"
     >
         <div class="mx-4 sm:mx-8 md:mx-16 lg:mx-32 my-8 md:my-12 lg:my-16">
             <Header />
@@ -43,3 +43,19 @@ import Footer from "../components/global/Footer.jsx";
         <Footer />
     </body>
 </html>
+
+<style is:global>
+    h1 {
+        @apply text-text;
+    }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply text-subtext0;
+    }
+    body {
+        @apply text-overlay2;
+    }
+</style>
