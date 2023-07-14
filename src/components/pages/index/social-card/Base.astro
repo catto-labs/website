@@ -5,16 +5,16 @@ import IconLink from "~icons/fa6-solid/link";
 ---
 
 <div
-    class="profile-card"
+    class="profile-card mb-12 sm:mb-0"
     data-tilt
     data-tilt-glare
     data-tilt-max-glare="0.15"
     data-tilt-max="5"
 >
     <div
-        class="flex sm:flex-row flex-col gap-y-4 items-center md:items-start text-center md:text-left gap-x-4"
+        class="flex relative sm:flex-row flex-col gap-y-4 items-center pt-12 sm:pt-0 md:items-start text-center md:text-left gap-x-4"
     >
-        <img src={img} />
+        <img src={img} class="absolute sm:relative -top-16 sm:top-0" />
         <div class="flex flex-col gap-y-2">
             <h6 class="name">
                 {name}
