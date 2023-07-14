@@ -14,7 +14,7 @@
         "@astrojs/solid-js": "^2.2.0",
         "@astrojs/tailwind": "^4.0.0",
         "@fontsource-variable/red-hat-text": "^5.0.6",
-        "@iconify-icons/simple-icons": "^1.2.59",
+        "@iconify-icons/fa6-solid": "^1.2.12",
         "astro": "^2.8.1",
         "astro-icon": "^0.8.1",
         "solid-js": "^1.4.3",
@@ -22,6 +22,7 @@
         "typewriter-effect": "^2.20.1"
     },
     "devDependencies": {
+        "@iconify-icons/simple-icons": "^1.2.59",
         "prettier": "^3.0.0",
         "prettier-plugin-astro": "^0.11.0",
         "prettier-plugin-tailwindcss": "^0.4.0"
