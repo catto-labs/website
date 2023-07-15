@@ -20,10 +20,7 @@ export default function Header() {
                     What we do
                 </p>
                 <Link text="Pokaimon" url="https://pokaimon.moe" />
-                <Link
-                    text="Pawnote"
-                    url="https://github.com/catto-labs/pawnote"
-                />
+                <Link text="Pawnote" url="https://pawnote.vercel.app" />
             </div>
             <div class="z-10 flex flex-col gap-y-4">
                 <p class="text-sm font-light uppercase tracking-tight text-overlay0">
