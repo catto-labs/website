@@ -33,7 +33,7 @@ const { url, bg, name, version, license, copyright } = Astro.props;
 
 <style>
     .card {
-        @apply relative h-32 w-full  rounded-2xl bg-surface2 bg-opacity-30 bg-cover bg-center transition duration-500 ease-in-out hover:scale-[1.0125];
+        @apply relative h-28 w-full rounded-2xl bg-surface2 bg-opacity-30 bg-cover bg-center transition duration-500 ease-in-out hover:scale-[1.0125] sm:h-32;
     }
 
     #cards:hover > .card::after {
