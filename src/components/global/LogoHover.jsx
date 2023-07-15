@@ -1,6 +1,3 @@
-import logotype from "../../assets/logotype_white.svg";
-import cattoText from "../../assets/type_white.svg";
-
 export default function LogoHover() {
     return (
         <div class="group flex h-fit flex-row gap-x-4 transition-all duration-200 ease-in-out hover:scale-[1.025]">
