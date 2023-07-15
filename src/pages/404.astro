@@ -1,0 +1,51 @@
+---
+import Base from "../layouts/Base.astro";
+import IconCircleExclamation from "~icons/fa6-solid/circle-exclamation";
+import IconArrowLeft from "~icons/fa6-solid/arrow-left";
+import CattoLogo from "../assets/logo_white.svg";
+
+const url = Astro.url;
+---
+
+<Base>
+    <main class="mt-16 mb-12">
+        <section id="about" class="gap-y-8 flex flex-col">
+            <div class="flex flex-col gap-y-2">
+                <h2 class="text font-semibold font-mono text-red text-lg">
+                    Error 404: Not Found
+                </h2>
+                <h1 class="text-4xl font-semibold text-text">Where am I?</h1>
+            </div>
+            <div
+                class="relative bg-base border group border-surface0 p-4 rounded-lg flex flex-row gap-x-2"
+            >
+                <img
+                    src={CattoLogo}
+                    class="absolute -top-[2.8rem] group-hover:-top-[5.5rem] transition-all ease-in-out right-8 h-24 -z-10 object-top object-cover w-32"
+                />
+                <IconCircleExclamation class="my-auto text-red" />
+                <p class="my-auto text-red">
+                    Page {url.pathname.slice(1)} was not found on this website!
+                    Did you mean to go somewhere else?
+                </p>
+            </div>
+            <div
+                class="bg-base p-4 border border-surface0 rounded-lg inline-flex"
+            >
+                <p class="my-auto">
+                    {url.origin}/<span class="bg-yellow text-crust"
+                        >{url.pathname.slice(1)}</span
+                    >
+                </p>
+                <IconArrowLeft class="my-auto ml-2 h-4" />
+                <p class="my-auto ml-1">Where are you going?</p>
+            </div>
+        </section>
+    </main>
+</Base>
+
+<style>
+    .icon {
+        @apply my-auto text-text transition duration-500 ease-in-out;
+    }
+</style>
