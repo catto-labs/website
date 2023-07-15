@@ -1,14 +1,7 @@
 import Link from "./Link.jsx";
-import IconAstro from "../../assets/technologies/astro.svg";
-import IconSolid from "../../assets/technologies/solid.svg";
-import IconTailwindCss from "../../assets/technologies/tailwindcss.svg";
-import IconNetlify from "../../assets/technologies/netlify.svg";
 import Logo from "../../assets/logo_white.svg";
 
 export default function Header() {
-    const underlineHover =
-        "absolute -bottom-1 w-0 h-[0.125rem] bg-mauve group-hover:w-1/2 transition-all ease-in-out duration-200";
-
     return (
         <footer class="relative flex flex-col justify-between gap-x-8 gap-y-16 overflow-hidden bg-crust px-4 py-8 shadow-inner sm:px-8 md:flex-row md:gap-y-0 md:px-16 md:py-12 lg:px-32 lg:py-16 xl:justify-start xl:gap-x-28 2xl:gap-x-32">
             <img
