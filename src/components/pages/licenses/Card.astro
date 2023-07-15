@@ -1,0 +1,98 @@
+---
+const { url, bg, name, version, license, copyright } = Astro.props;
+---
+
+<a class="card group cursor-pointer" style={bg} href={url}>
+    <div class="content group justify-end">
+        <div>
+            <div class="inline-flex gap-x-2">
+                <slot />
+                <p
+                    class="group-hover:text-text text-subtext1 my-auto text-lg font-medium transition duration-500 ease-in-out"
+                >
+                    {name}
+                    <span
+                        class="text-text opacity-70 hover:opacity-100 mix-blend-overlay text-sm transition duration-500 ease-in-out"
+                        >{version}</span
+                    >
+                </p>
+            </div>
+            <p
+                class="my-auto ml-[1.635rem] group-hover:text-subtext1 transition duration-500 ease-in-out"
+            >
+                {license}
+            </p>
+            <p
+                class="my-auto ml-[1.635rem] group-hover:text-subtext1 transition duration-500 ease-in-out"
+            >
+                {copyright}
+            </p>
+        </div>
+    </div>
+</a>
+
+<style>
+    .card {
+        @apply relative h-32 w-full  rounded-2xl bg-surface2 bg-opacity-30 bg-cover bg-center transition duration-500 ease-in-out hover:scale-[1.0125];
+    }
+
+    #cards:hover > .card::after {
+        opacity: 1;
+    }
+
+    #cards2:hover > .card::after {
+        opacity: 1;
+    }
+
+    .card:hover::before {
+        opacity: 1;
+    }
+
+    .card::before,
+    .card::after {
+        border-radius: inherit;
+        content: "";
+        transition: opacity 450ms;
+        @apply absolute left-0 top-0 z-30 h-full w-full opacity-0;
+    }
+
+    .card::before {
+        background: radial-gradient(
+            50rem circle at var(--mouse-x) var(--mouse-y),
+            rgba(255, 255, 255, 0.06),
+            transparent 40%
+        );
+        @apply z-30;
+    }
+
+    .card > .content {
+        @apply relative z-20 flex h-full flex-col rounded-[0.8rem] border border-surface0 bg-gradient-to-t from-[rgba(30,30,46,0.9)] to-transparent p-4 bg-blend-screen backdrop-brightness-75 sm:p-6;
+    }
+</style>
+
+<script>
+    document.getElementById("cards")!.onmousemove = (e) => {
+        for (const card of document.getElementsByClassName(
+            "card"
+        ) as HTMLCollectionOf<HTMLElement>) {
+            const rect = card.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        }
+    };
+    document.getElementById("cards2")!.onmousemove = (e) => {
+        for (const card of document.getElementsByClassName(
+            "card"
+        ) as HTMLCollectionOf<HTMLElement>) {
+            const rect = card.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        }
+    };
+</script>

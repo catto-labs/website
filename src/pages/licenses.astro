@@ -1,0 +1,137 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/pages/licenses/Card.astro";
+
+import IconAstro from "~icons/simple-icons/astro";
+import IconSolid from "~icons/simple-icons/solid";
+import IconTailwindCss from "~icons/simple-icons/tailwindcss";
+import IconArrowPointer from "~icons/fa6-solid/arrow-pointer";
+import IconIcons from "~icons/fa6-solid/icons";
+import IconComputerMouse from "~icons/fa6-solid/computer-mouse";
+import IconRedhat from "~icons/simple-icons/redhat";
+import IconCatppuccin from "../assets/technologies/catppuccin.png";
+import IconFontAwesome from "~icons/simple-icons/fontawesome";
+---
+
+<Base>
+    <main class="mt-16 mb-12">
+        <section id="about" class="gap-y-8 flex flex-col">
+            <h2 class="text-3xl font-semibold">Open-source Licenses</h2>
+            <div class="gap-y-4 flex flex-col">
+                <h3 class="text-2xl">External packages and projects</h3>
+                <div
+                    class="grid md:grid-cols-2 xl:grid-cols-3 gap-4"
+                    id="cards"
+                >
+                    <Card
+                        name="Astro"
+                        version="v2.8.1"
+                        url="https://astro.build"
+                        license="MIT License"
+                        copyright="© 2023 Astro Contributors"
+                        bg="background: url(https://astro.build/assets/noise.webp) repeat, linear-gradient(83.21deg,#3245ff 0%,#bc52ee 100%); background-blend-mode: overlay;"
+                    >
+                        <IconAstro class="icon group-hover:text-peach" />
+                    </Card>
+                    <Card
+                        name="SolidJS"
+                        version="v1.4.3"
+                        url="https://solidjs.com"
+                        license="MIT License"
+                        copyright="© 2016-2023 Ryan Carniato"
+                        bg="background: url(https://www.solidjs.com/assets/header-5155d81a.svg) right, linear-gradient(to right, rgb(79 136 198), rgb(68 107 158))"
+                    >
+                        <IconSolid class="icon group-hover:text-sapphire" />
+                    </Card>
+                    <Card
+                        name="Tailwind CSS"
+                        version="v3.0.24"
+                        url="https://solidjs.com"
+                        license="MIT License"
+                        copyright="© 2016-2023 Ryan Carniato"
+                        bg="background-image: url(https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg)"
+                    >
+                        <IconTailwindCss class="icon group-hover:text-sky" />
+                    </Card>
+                    <Card
+                        name="Vanilla-tilt.js"
+                        version="v1.8.0"
+                        url="https://micku7zu.github.io/vanilla-tilt.js/"
+                        license="MIT License"
+                        copyright="© 2017 Șandor Sergiu"
+                        bg="background: linear-gradient(135deg, #0099F7 , #F11712);"
+                    >
+                        <IconArrowPointer
+                            class="icon group-hover:text-lavender"
+                        />
+                    </Card>
+                    <Card
+                        name="unplugin-icons"
+                        version="v0.16.5"
+                        url="https://github.com/antfu/unplugin-icons"
+                        license="MIT License"
+                        copyright="© 2020 Anthony Fu"
+                        bg="background: linear-gradient(135deg, #3fbef7 , #0394d6);"
+                    >
+                        <IconIcons class="icon group-hover:text-blue" />
+                    </Card>
+                </div>
+            </div>
+            <div class="gap-y-4 flex flex-col">
+                <h3 class="text-2xl">Fonts and assets</h3>
+                <div
+                    class="grid md:grid-cols-2 xl:grid-cols-3 gap-4"
+                    id="cards2"
+                >
+                    <Card
+                        name="Amazing Mouse-scroll button"
+                        url="https://codepen.io/josedavidfumo/pen/KVGejW"
+                        license="No license"
+                        copyright="© Jose David Fumo"
+                        bg="background: #464646"
+                    >
+                        <IconComputerMouse
+                            class="icon group-hover:text-overlay2"
+                        />
+                    </Card>
+                    <Card
+                        name="Red Hat Font"
+                        version="v4.0.3"
+                        url="https://www.redhat.com/en/about/brand/standards/typography"
+                        license="SIL Open Font License 1.1"
+                        copyright="© 2021 Red Hat, Inc."
+                        bg="background: repeat url(https://www.redhat.com/rhdc/managed-files/dot-32px_padding.svg);"
+                    >
+                        <IconRedhat class="icon group-hover:text-red" />
+                    </Card>
+                    <Card
+                        name="Catppuccin Macchiato"
+                        version="v0.2.0"
+                        url="https://github.com/catppuccin/catppuccin"
+                        license="Licensed under MIT License"
+                        copyright="© 2021 Catppuccin"
+                        bg="background: linear-gradient(90deg, rgba(237,135,150,1) 0%, rgba(237,135,150,1) 13%, rgba(245,169,127,1) 14%, rgba(245,169,127,1) 27%, rgba(238,212,159,1) 28%, rgba(238,212,159,1) 42%, rgba(166,218,149,1) 43%, rgba(166,218,149,1) 56%, rgba(125,196,228,1) 57%, rgba(125,196,228,1) 70%, rgba(138,173,244,1) 71%, rgba(138,173,244,1) 84%, rgba(183,189,248,1) 85%, rgba(183,189,248,1) 100%);"
+                    >
+                        <img src={IconCatppuccin} class="icon w-[1.0625rem]" />
+                    </Card>
+                    <Card
+                        name="Font Awesome"
+                        version="v6.4.0"
+                        url="https://fontawesome.com/"
+                        license="CC BY 4.0 License"
+                        copyright="© Fonticons, Inc."
+                        bg="background: center / contain url(https://img.fortawesome.com/1ce05b4b/hero-icon-bg.svg), #ffffff"
+                    >
+                        <IconFontAwesome class="icon group-hover:text-blue" />
+                    </Card>
+                </div>
+            </div>
+        </section>
+    </main>
+</Base>
+
+<style>
+    .icon {
+        @apply my-auto text-text transition duration-500 ease-in-out;
+    }
+</style>
