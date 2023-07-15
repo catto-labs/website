@@ -15,6 +15,12 @@ export default function Header() {
                 src={Logo}
                 class="absolute -bottom-16 -right-16 h-[32rem] rotate-[-12deg] opacity-90 mix-blend-overlay md:-bottom-11 md:-right-11 md:h-96"
             />
+            <div class="z-10 flex flex-col gap-y-2">
+                <p>catto labs — Made with love, worldwide.</p>
+                <p class="text-sm font-light text-overlay0">
+                    Copyright © 2023 catto labs
+                </p>
+            </div>
             <div class="z-10 flex flex-col gap-y-4">
                 <p class="text-sm font-light uppercase tracking-tight text-overlay0">
                     What we do
@@ -42,79 +48,6 @@ export default function Header() {
                 </p>
                 <Link text="Branding" url="/branding" />
                 <Link text="Open-source Licenses" url="/licenses" />
-            </div>
-            <div class="z-10 flex flex-col gap-y-4">
-                <p class="text-sm font-light uppercase tracking-tight text-overlay0">
-                    Shoutouts
-                </p>
-                <div class="flex flex-col gap-y-4">
-                    <div>
-                        Built using{" "}
-                        <a
-                            href="https://astro.build/"
-                            class="group relative inline-flex w-fit"
-                        >
-                            <div>
-                                <img
-                                    class="mr-[0.0625rem] inline-flex h-4"
-                                    src={IconAstro}
-                                ></img>
-                                stro
-                            </div>
-                            <span class={underlineHover + " left-1/2"}></span>
-                            <span class={underlineHover + " right-1/2"}></span>
-                        </a>{" "}
-                        and{" "}
-                        <a
-                            href="https://www.solidjs.com/"
-                            class="group relative inline-flex w-fit"
-                        >
-                            <div>
-                                <img
-                                    class="mb-1 mr-1 inline-flex h-4"
-                                    src={IconSolid}
-                                ></img>
-                                SolidJS
-                            </div>
-                            <span class={underlineHover + " left-1/2"}></span>
-                            <span class={underlineHover + " right-1/2"}></span>
-                        </a>
-                    </div>
-                    <div>
-                        Styled with{" "}
-                        <a
-                            href="https://tailwindcss.com"
-                            class="group relative ml-[0.125rem] inline-flex w-fit"
-                        >
-                            <div>
-                                <img
-                                    class="mb-1 mr-1 inline-flex w-5"
-                                    src={IconTailwindCss}
-                                ></img>
-                                Tailwind CSS
-                            </div>
-                            <span class={underlineHover + " left-1/2"}></span>
-                            <span class={underlineHover + " right-1/2"}></span>
-                        </a>
-                    </div>
-                    <div>
-                        Hosted by{" "}
-                        <a
-                            href="https://www.netlify.com"
-                            class="group relative ml-1 inline-flex w-fit"
-                        >
-                            <div>
-                                <img
-                                    class="mb-1 mr-1 inline-flex w-5"
-                                    src={IconNetlify}
-                                ></img>
-                                Netlify
-                            </div>
-                            <span class={underlineHover + " left-1/2"}></span>
-                            <span class={underlineHover + " right-1/2"}></span>
-                        </a>
-                    </div>
-                </div>
             </div>
         </footer>
     );
