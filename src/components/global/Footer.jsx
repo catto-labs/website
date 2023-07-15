@@ -40,10 +40,7 @@ export default function Header() {
                 <p class="text-sm font-light uppercase tracking-tight text-overlay0">
                     Links
                 </p>
-                <Link
-                    text="Branding"
-                    url="https://github.com/catto-labs/brand"
-                />
+                <Link text="Branding" url="/branding" />
                 <Link text="Open-source Licenses" url="/licenses" />
             </div>
             <div class="z-10 flex flex-col gap-y-4">
