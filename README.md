@@ -1,6 +1,6 @@
 # catto-labs/website
 
-catto labs' official website, hosted on GitHub pages.
+catto labs' official website, hosted on Cloudflare pages.
 
 ## 🚀 Tech Stack
 
