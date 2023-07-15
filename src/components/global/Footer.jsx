@@ -42,7 +42,7 @@ export default function Header() {
                 </p>
                 <Link
                     text="Branding"
-                    url="https://github.com/catto-labs/branding"
+                    url="https://github.com/catto-labs/brand"
                 />
                 <Link text="Open-source Licenses" url="/licenses" />
             </div>
