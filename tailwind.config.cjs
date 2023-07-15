@@ -6,6 +6,7 @@ module.exports = {
     theme: {
         fontFamily: {
             sans: ["Red Hat Text Variable", ...defaultTheme.fontFamily.sans],
+            mono: [...defaultTheme.fontFamily.mono],
         },
         extend: {
             animation: {
