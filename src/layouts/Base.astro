@@ -3,6 +3,13 @@ import "@fontsource-variable/red-hat-text";
 
 import Header from "../components/global/Header.jsx";
 import Footer from "../components/global/Footer.jsx";
+
+const meta = {
+    title: "catto.labs",
+    desc: "We are catto labs, a team of developers around the world who want to have some fun creating projects together.",
+    favicon: "/favicon.svg"
+    banner: "/banner.png",
+};
 ---
 
 <html lang="en">
@@ -13,19 +20,21 @@ import Footer from "../components/global/Footer.jsx";
         <meta name="generator" content={Astro.generator} />
 
         <!-- Website metadata -->
-        <title>catto.labs</title>
-        <meta property="og:title" content="catto labs" />
-        <meta
-            name="description"
-            content="We are catto labs, a team of developers around the world who want to have some fun creating projects together."
-        />
+        <title>{meta.title}</title>
+        <meta property="og:title" content={meta.title} />
+        <meta property="twitter:title" content={meta.title} />
+
+        <meta name="description" content={meta.desc} />
+        <meta name="og:description" content={meta.desc} />
+        <meta name="twitter:description" content={meta.desc} />
 
         <!-- catto labs branding -->
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta property="og:image" content="/banner.png" />
+        <link rel="icon" type="image/svg+xml" href={meta.favicon} />
+        <meta property="og:image" content={meta.banner} />
+        <meta property="twitter:image" content={meta.banner} />
 
         <!-- miscellaneous properties -->
-        <meta name="twitter:card" content="summary" />
+        <meta property="twitter:card" content="summary_large_image" />
 
         <!-- uhhhh -->
         <meta
