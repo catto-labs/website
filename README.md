@@ -4,7 +4,11 @@ catto labs' official website, hosted on Cloudflare pages.
 
 ## 🚀 Tech Stack
 
-The main tech stack is Astro with SolidJS using TypeScript, and Tailwind CSS for styling.
+The website uses our new, front-end tech stack: CATS.
+* Cloudflare (Pages),
+* Astro
+* Tailwind CSS
+* SolidJS
 
 The colour palette used is called Catppuccin, and can be found in the licenses page of our website.
 
