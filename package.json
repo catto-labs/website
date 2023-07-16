@@ -15,6 +15,7 @@
         "@astrojs/tailwind": "^4.0.0",
         "@fontsource-variable/red-hat-text": "^5.0.6",
         "@iconify-json/devicon-plain": "^1.1.12",
+        "@iconify-json/twemoji": "^1.1.11",
         "astro": "^2.8.1",
         "solid-js": "^1.4.3",
         "tailwindcss": "^3.0.24",
