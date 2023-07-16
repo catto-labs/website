@@ -23,7 +23,6 @@ import IconLink from "~icons/fa6-solid/link";
                 {name}
                 <span>{username}</span>
             </h6>
-            <p>{role.replace("-", "•")}</p>
             {
                 url ? (
                     <a
@@ -42,35 +41,35 @@ import IconLink from "~icons/fa6-solid/link";
         </div>
     </div>
     <slot />
+
+    <style>
+        .profile-card {
+            @apply flex flex-col gap-y-6 rounded-lg border border-surface0 bg-base bg-opacity-90 p-4;
+        }
+
+        .profile-card > div > img {
+            @apply h-24 w-max rounded-full border border-gray-900 sm:rounded-lg;
+        }
+
+        .name {
+            @apply text-lg font-semibold;
+        }
+
+        .name > span::before {
+            content: "(";
+        }
+
+        .name > span::after {
+            content: ")";
+        }
+        .name > span {
+            @apply text-sm font-normal text-gray-400;
+        }
+
+        .links {
+            @apply flex flex-row gap-x-4;
+        }
+    </style>
+
+    <script src="vanilla-tilt"></script>
 </div>
-
-<style>
-    .profile-card {
-        @apply flex flex-col gap-y-6 rounded-lg border border-surface0 bg-base bg-opacity-90 p-4;
-    }
-
-    .profile-card > div > img {
-        @apply h-24 w-max rounded-full border border-gray-900 sm:rounded-lg;
-    }
-
-    .name {
-        @apply text-lg font-semibold;
-    }
-
-    .name > span::before {
-        content: "(";
-    }
-
-    .name > span::after {
-        content: ")";
-    }
-    .name > span {
-        @apply text-sm font-normal text-gray-400;
-    }
-
-    .links {
-        @apply flex flex-row gap-x-4;
-    }
-</style>
-
-<script src="vanilla-tilt"></script>

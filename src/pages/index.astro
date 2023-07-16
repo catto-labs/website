@@ -31,10 +31,18 @@ import IconGithub from "~icons/simple-icons/github";
 import IconDiscord from "~icons/simple-icons/discord";
 import IconEmail from "~icons/fa6-solid/envelope";
 
+import EmojiArtistPalette from "~icons/twemoji/artist-palette";
+import EmojiSmilingFaceWithSunglasses from "~icons/twemoji/smiling-face-with-sunglasses";
+import EmojiLaptop from "~icons/twemoji/laptop";
+import EmojiManTechnologist from "~icons/twemoji/man-technologist";
+import EmojiOfficeWorker from "~icons/twemoji/office-worker";
+import EmojiMagnifyingGlassTiltedLeft from "~icons/twemoji/magnifying-glass-tilted-left";
+
 import ProjectCardBase from "../components/pages/index/project-card/Base.astro";
 import ProjectCardTech from "../components/pages/index/project-card/Tech.astro";
 
 import SocialCardBase from "../components/pages/index/social-card/Base.astro";
+import SocialCardRole from "../components/pages/index/social-card/Role.astro";
 import SocialCardTech from "../components/pages/index/social-card/Tech.astro";
 import SocialCardLinks from "../components/pages/index/social-card/Socials.astro";
 import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
@@ -166,6 +174,16 @@ import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
                         role="CDO - Chief Design Officer"
                         url="pnxl.dev"
                     >
+                        <SocialCardRole>
+                            <SocialCardChip text="Head of Design">
+                                <EmojiArtistPalette class="social-tech" />
+                            </SocialCardChip>
+                            <SocialCardChip text="Nominated #1 for being cool">
+                                <EmojiSmilingFaceWithSunglasses
+                                    class="social-tech"
+                                />
+                            </SocialCardChip>
+                        </SocialCardRole>
                         <SocialCardTech>
                             <SocialCardChip text="Vue" url="https://vuejs.org/">
                                 <IconVue
@@ -231,6 +249,16 @@ import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
                         role="CTO - Chief Technical Officer"
                         url="vexcited.vercel.app"
                     >
+                        <SocialCardRole>
+                            <SocialCardChip text="Head of Technology">
+                                <EmojiLaptop class="social-tech" />
+                            </SocialCardChip>
+                            <SocialCardChip
+                                text="Technical God, carries thru projects"
+                            >
+                                <EmojiManTechnologist class="social-tech" />
+                            </SocialCardChip>
+                        </SocialCardRole>
                         <SocialCardTech>
                             <SocialCardChip
                                 text="Rust"
@@ -315,6 +343,16 @@ import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
                         role="CEO - Chief Engineer Officer"
                         url="trobo.tech"
                     >
+                        <SocialCardRole>
+                            <SocialCardChip text="Chief Executive Officer">
+                                <EmojiOfficeWorker class="social-tech" />
+                            </SocialCardChip>
+                            <SocialCardChip text="Founder of catto labs">
+                                <EmojiMagnifyingGlassTiltedLeft
+                                    class="social-tech"
+                                />
+                            </SocialCardChip>
+                        </SocialCardRole>
                         <SocialCardTech>
                             <SocialCardChip text="Vue" url="https://vuejs.org/">
                                 <IconVue
