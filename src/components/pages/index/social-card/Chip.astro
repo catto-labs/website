@@ -4,6 +4,7 @@ const { text, url } = Astro.props;
 
 <a
     href={url}
+    target="_blank"
     class={`group inline-flex relative sm:gap-x-1 sm:rounded-full hover:text-mauve sm:hover:text-subtext1 overflow-hidden sm:px-2 sm:py-1 sm:bg-surface0 sm:hover:bg-surface1 sm:border border-surface2 transition ease-in-out duration-[250ms]`}
 >
     <slot />
