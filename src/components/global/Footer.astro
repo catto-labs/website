@@ -1,6 +1,8 @@
 ---
 import Link from "./Link.jsx";
 import Logo from "../../assets/logo_white.svg";
+
+import EmojiSparkles from "~icons/twemoji/sparkles";
 ---
 
 <footer
@@ -17,7 +19,11 @@ import Logo from "../../assets/logo_white.svg";
         ></path>
     </svg>
     <div class="z-10 flex flex-col gap-y-2">
-        <p>catto labs — Made with love, worldwide ✨</p>
+        <p class="inline-flex">
+            catto labs — Made with love, worldwide <EmojiSparkles
+                class="text-sm my-auto ml-1"
+            />
+        </p>
         <p class="text-sm font-light text-overlay0">
             Copyright © 2023 catto labs
         </p>
