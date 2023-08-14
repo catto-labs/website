@@ -20,6 +20,7 @@ import Scroller from "../components/pages/index/Scroller.astro";
 
 import LogoPokaimon from "../assets/projects/pokaimon.svg";
 import LogoPawnote from "../assets/projects/pawnote.svg";
+import LogoDrive from "../assets/projects/drive.png";
 
 import PfpVexcited from "../assets/profiles/vexcited.png";
 import PfpTrobo from "../assets/profiles/trobo.jpg";
@@ -103,6 +104,30 @@ import SocialCardChip from "../components/pages/index/social-card/Chip.astro";
             <section id="projects" class="py-16 gap-y-16 flex flex-col">
                 <h2 class="text-3xl font-semibold">Our Projects</h2>
                 <div class="grid grid-cols-1 gap-16" id="cards">
+                    <ProjectCardBase
+                        logo={LogoDrive}
+                        bg="bg-[url(/src/assets/projects/drivebg.png)]"
+                        url="https://drive.cattolabs.com/"
+                        git="https://github.com/catto-labs/drive"
+                    >
+                        <p class="max-w-[32rem] text-lg">
+                            Drive - a versatile file-sharing platform inspired by Google Drive and WeTransfer. With a range of sharing options, including anonymous uploads and easy file sharing, Drive empowers users to collaborate and exchange files effortlessly. Experience the freedom of anonymous sharing with Drive.
+                        </p>
+                        <ProjectCardTech>
+                            <IconSolid
+                                class="group-hover:text-sapphire tech-icon"
+                            />
+                            <IconTypescript
+                                class="group-hover:text-blue tech-icon delay-100"
+                            />
+                            <IconSupabase
+                                class="group-hover:text-green tech-icon delay-200"
+                            />
+                            <IconUnoCss
+                                class="group-hover:text-text tech-icon delay-200"
+                            />
+                        </ProjectCardTech>
+                    </ProjectCardBase>
                     <ProjectCardBase
                         logo={LogoPawnote}
                         bg="bg-[url(/src/assets/projects/pawnote.png)]"
