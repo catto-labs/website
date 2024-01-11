@@ -1,15 +1,8 @@
 ---
-const { img, name, username, role, url, location, timezone } = Astro.props;
+const { img, name, username, role, url, location } = Astro.props;
 
 import IconLink from "~icons/fa6-solid/link";
 import IconLocationDot from "~icons/fa6-solid/location-dot";
-
-const res = await fetch(
-    `https://www.timeapi.io/api/TimeZone/zone?timeZone=${timezone}`
-);
-const response: any = await res.json();
-const parse = await new Date(response.currentLocalTime);
-const time = parse.toLocaleTimeString("en-UK").slice(0, 5);
 ---
 
 <div
@@ -43,10 +36,6 @@ const time = parse.toLocaleTimeString("en-UK").slice(0, 5);
                     />
                     <p class="duration-[250ms] w-full sm:w-fit">
                         {location}
-                        <span
-                            class="sm:absolute bottom-[0.0625rem] sm:ml-1 ml-[0.125rem]"
-                            >{time}</span
-                        >
                     </p>
                 </>
             </a>
